@@ -2,6 +2,8 @@
 
 DB_NAME = yelp. This variable is defined in DB.py
 
+Loads 10 years of NFL data (from 10 sepearte csv files) into a Postgres table.
+
 '''
 
 import json
@@ -9,7 +11,7 @@ from DB import DB, DB_NAME
 
 def main():
 
-	file_stem = '../nfl_season_stats_'
+	file_stem = 'aux_datasets/nfl_season_stats_'
 
 	rows = []
 

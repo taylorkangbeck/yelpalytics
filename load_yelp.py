@@ -2,6 +2,9 @@
 
 DB_NAME = yelp. This variable is defined in DB.py
 
+Loads the necessary yelp data into a Postgres table. Lines are commented out to prevent the 
+lengthy process of re-inserting the 1.6 million line review data.
+
 '''
 
 import json
@@ -10,7 +13,7 @@ from DB import DB, DB_NAME
 def main():
 	businesses = []
 
-	for line in open('../yelp_academic_dataset_business.json'):
+	for line in open('../../yelp_academic_dataset_business.json'):
 		try: 
 			businesses.append(json.loads(line))
 		except:
@@ -18,7 +21,7 @@ def main():
 
 	users = []
 
-	#for line in open('../yelp_academic_dataset_user.json'):
+	#for line in open('../../yelp_academic_dataset_user.json'):
 	#	try:
 	#		users.append(json.loads(line))
 	#	except:
@@ -26,7 +29,7 @@ def main():
 	
 	reviews = []
 
-	#for line in open('../yelp_academic_dataset_review.json'):
+	#for line in open('../../yelp_academic_dataset_review.json'):
 	#	try:
 	#		reviews.append(json.loads(line))
 	#	except:

@@ -2,7 +2,11 @@ from DB import DB, DB_NAME
 
 '''
 
-Sports data
+This program uses the database to extract all yelp reviews from Phoenix (not completely direct because 
+the review table doesn't contain a city field) and then puts them in a list which is then iterated
+over to check if its 'categories' array contains 'Sports Bar'. These reviews are put in a new table.
+Queries and code is then used to create three JSONs of sports bar reviews from Phoenix, those that
+occurred on a winning day, a losing day, and a non game day.
 
 '''
 

@@ -2,7 +2,9 @@ from DB import DB, DB_NAME
 from datetime import date
 '''
 
-Sports data
+This program uses the database to extract all yelp reviews from Pittsburgh (not completely direct because 
+the review table doesn't contain a city field) and then filters it down to dates within our weather dataset
+and at the same time producing a field for bad_weather true/false. It prints the result in JSON format
 
 '''
 
@@ -17,7 +19,7 @@ def main():
 
 	bad_weathers = []
 	
-	for line in open('../storm_data_pittsburgh.csv'):
+	for line in open('aux_datasets/storm_data_pittsburgh.csv'):
                         try:
                                 row = line.split(',')
                                 date_raw = row[3]
