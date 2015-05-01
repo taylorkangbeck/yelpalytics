@@ -8,6 +8,13 @@ over to check if its 'categories' array contains 'Sports Bar'. These reviews are
 Queries and code is then used to create three JSONs of sports bar reviews from Phoenix, those that
 occurred on a winning day, a losing day, and a non game day.
 
+Code was re-run several times to get all the necessary JSONs by hard-coding the 'winner' and 'loser'
+parameters.
+
+Commented code was used once to create the sports_bars table in Postgres. Other commented code was
+left in from a previous approach which needed to be changed in order to accomodate the statistical
+model.
+
 '''
 
 def main():
